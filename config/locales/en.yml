@@ -33,6 +33,10 @@ en:
   app_title: Just Tired
   home:
     home:
+      profile: Profile
+      logout: LogOut
+      Login: Log In
+      sign_up: Sign Up
 
 
     contact:

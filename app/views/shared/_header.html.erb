@@ -1,5 +1,5 @@
 <!-- Header -->
-  <header class="masthead">
+  <!-- <header class="masthead">
     <div class="container">
       <div class="intro-text">
         <div class="intro-lead-in">Book your parking spot at Babylon, Yasouzvin Park in advance</div>
@@ -34,4 +34,17 @@
         </ul>
       </div>
     </div>
+  </nav> -->
+
+  <nav>
+  <% if user_signed_in? %>
+    <%= "#{current_user.email} |" %>
+    <%= link_to t('profile'), edit_user_registration_path %>
+    <%= '|' %>
+    <%= link_to ('logout'), destroy_user_session_path, method: 'delete' %>
+    <% else %>
+    <%= link_to t('login'), new_user_session_path %>
+    <%= '|' %>
+    <%= link_to t('sign_up'), new_user_registration_path %>
+  <% end %>
   </nav>

@@ -5,6 +5,8 @@ ruby '2.5.1'
 
 gem 'bootstrap', '~> 4.0.0'
 
+gem 'devise'
+
 gem 'modernizr-rails'
 
 gem 'rails-controller-testing'
