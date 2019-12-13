@@ -14,8 +14,8 @@ class ParkingsTest < ApplicationSystemTestCase
     visit parkings_url
     click_on "New Parking"
 
+    fill_in "Booking", with: @parking.booking_id
     fill_in "Location", with: @parking.location
-    fill_in "Schedule", with: @parking.schedule_id
     fill_in "Status", with: @parking.status
     click_on "Create Parking"
 
@@ -27,8 +27,8 @@ class ParkingsTest < ApplicationSystemTestCase
     visit parkings_url
     click_on "Edit", match: :first
 
+    fill_in "Booking", with: @parking.booking_id
     fill_in "Location", with: @parking.location
-    fill_in "Schedule", with: @parking.schedule_id
     fill_in "Status", with: @parking.status
     click_on "Update Parking"
 

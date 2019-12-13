@@ -16,8 +16,13 @@ class ParkingsController < ApplicationController
   # GET /parkings/new
   def new
     @parking = Parking.new
-    @schedule = Schedule.new
+
   end
+
+  def addBooking
+    @booking = Booking.new
+    @parking.booking_id = @booking.id
+    end
 
   # GET /parkings/1/edit
   def edit

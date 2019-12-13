@@ -10,27 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_13_165511) do
+ActiveRecord::Schema.define(version: 2019_12_13_174350) do
 
-  create_table "parkings", force: :cascade do |t|
-    t.string "status", null: false
-    t.string "location", null: false
-    t.integer "schedule_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["schedule_id"], name: "index_parkings_on_schedule_id"
-  end
-
-  create_table "schedules", force: :cascade do |t|
+  create_table "bookings", force: :cascade do |t|
     t.string "status"
     t.datetime "start"
     t.datetime "end"
+    t.integer "user_id"
     t.integer "parking_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["parking_id"], name: "index_bookings_on_parking_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "parkings", force: :cascade do |t|
+    t.string "status"
+    t.string "location"
     t.integer "booking_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["booking_id"], name: "index_schedules_on_booking_id"
-    t.index ["parking_id"], name: "index_schedules_on_parking_id"
+    t.index ["booking_id"], name: "index_parkings_on_booking_id"
   end
 
   create_table "users", force: :cascade do |t|

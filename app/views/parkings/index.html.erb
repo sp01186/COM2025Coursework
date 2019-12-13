@@ -7,7 +7,7 @@
     <tr>
       <th>Status</th>
       <th>Location</th>
-      <th>Schedule</th>
+      <th>Booking</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,7 +17,7 @@
       <tr>
         <td><%= parking.status %></td>
         <td><%= parking.location %></td>
-        <td><%= parking.schedule_id %></td>
+        <td><%= parking.booking_id %></td>
         <td><%= link_to 'Show', parking %></td>
         <td><%= link_to 'Edit', edit_parking_path(parking) %></td>
         <td><%= link_to 'Destroy', parking, method: :delete, data: { confirm: 'Are you sure?' } %></td>

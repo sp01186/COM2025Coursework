@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   post 'request_contact', to: 'home#request_contact'
 
+  get 'booking', to: 'parking#addBooking'
+
 end

@@ -17,7 +17,7 @@ class ParkingsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create parking" do
     assert_difference('Parking.count') do
-      post parkings_url, params: { parking: { location: @parking.location, schedule_id: @parking.schedule_id, status: @parking.status } }
+      post parkings_url, params: { parking: { booking_id: @parking.booking_id, location: @parking.location, status: @parking.status } }
     end
 
     assert_redirected_to parking_url(Parking.last)
@@ -34,7 +34,7 @@ class ParkingsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update parking" do
-    patch parking_url(@parking), params: { parking: { location: @parking.location, schedule_id: @parking.schedule_id, status: @parking.status } }
+    patch parking_url(@parking), params: { parking: { booking_id: @parking.booking_id, location: @parking.location, status: @parking.status } }
     assert_redirected_to parking_url(@parking)
   end
 

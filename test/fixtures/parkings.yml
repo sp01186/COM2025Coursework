@@ -3,9 +3,9 @@
 one:
   status: MyString
   location: MyString
-  schedule_id: 1
+  booking_id: 1
 
 two:
   status: MyString
   location: MyString
-  schedule_id: 1
+  booking_id: 1

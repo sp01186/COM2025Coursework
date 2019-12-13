@@ -11,19 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :status %>
-    <%= form.text_field :status %>
+  <div class="options">
+    <% parking_array = Parking.all.map { |parking| [parking.status, category.id] } %>
+    <%= options_for_select(parking_array) %>
   </div>
 
   <div class="field">
     <%= form.label :location %>
     <%= form.text_field :location %>
-  </div>
-
-  <div class="field">
-    <%= form.label :schedule_id %>
-    <%= form.number_field :schedule_id %>
   </div>
 
   <div class="actions">
