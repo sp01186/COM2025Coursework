@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+
 gem 'bootstrap', '~> 4.0.0'
 
 gem 'devise'
@@ -13,11 +14,7 @@ gem 'rails-controller-testing'
 
 gem 'jquery-rails'
 
-gem 'amoeba'
-
-gem 'timezone', '~> 1.0'
-
-gem 'local_time'
+gem "simple_calendar", "~> 2.0"
 
 gem 'stripe'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

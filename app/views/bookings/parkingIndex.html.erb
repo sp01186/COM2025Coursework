@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Parkings</h1>
+  <!-- <a class="nav-link js-scroll-trigger" href=<%= parkings_path %>>Book Parking</a> -->
+
+<h2>
+
+<table>
+  <thead>
+    <div class="options">
+    </div>
+  </thead>
+
+  <tbody>
+
+    <h1> WHY AM I SUFFERING LIKE THIS </h1>
+    <% @parkings.each do |parking| %>
+    <h3><%=parking.location%></h3>
+      <%= form_tag bookings_path, method: 'post' do %>
+      <%= hidden_field_tag :name, parking.id%>
+      <%= link_to 'Book', bookings_path(:name => parking)%>
+      <% end %>
+    <% end %>
+
+  </tbody>
+</table>
+
+<br>

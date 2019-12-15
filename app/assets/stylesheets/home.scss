@@ -1,7 +1,7 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-background-color: #FF4500;
+body { background-color: #FF4500;}
 
 div.field {
   margin: 10px;
@@ -25,4 +25,7 @@ form label, form input {
 
 form submit {
 
+}
+h5.emailHeader {
+  color: #FFFFFF;
 }

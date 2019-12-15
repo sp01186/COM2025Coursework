@@ -1,0 +1,50 @@
+<nav class="sickHeart">
+  <ul id="nav-tab_bookings">
+    <li class = "active" data-tab="calender">
+      <%= link_to '#calender', class: "tab flex items-center" do %>
+      <svg viewBox="0 0 20 20" width="16" height="16"><title>calender</title><parth d
+        ="M1 rc0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4zm2 2v12h14V6H3zm2-6h2v2H5V0zm8 0h2v2h-2v0zM5
+        9h2v2H5V9zm0 4h2v2H5v-2zm4-4h2v2H9V9zm0 4h2v2H9v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2z"></path></svg>
+      Calender
+      <% end %>
+    </li>
+    <li data-tab="all-boookings">
+      <%= link_to '#all-bookings' %>
+        All Meetings
+        <% end %>
+    </li>
+  </ul>
+</nav>
+
+<div>
+  <h1>Meetings</h1>
+
+
+
+  <% bookings.each do |bookings| %>
+
+    <div>
+      <div>
+        <div>
+          <%= link_to booking.status, booking %>
+        </div>
+        <div>
+          <%= readable_time(meeting.start_time) %> &ndash;
+          <%= readable_time(meeting.end_time) %>
+        </div>
+      </div>
+    </div>
+
+
+    <%= link_to "Cancel Booking", booking, method: :delete, data { confirm: "Are you sure?"} %>
+    <% end %>
+
+  </div>
+
+
+  <div id="calender" class="tab-panel active">
+    <h2>Meeting Calender</h2>
+    <div id="meeting-calender">
+      <%= render "shared/calender", bookings: bookings %>
+    </div>
+  </div>

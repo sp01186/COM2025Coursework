@@ -1,0 +1,6 @@
+$("#myupdatepost_<%= @feedback.id %>").modal('hide');
+
+$("#post_<%= @feedback.id %>").fadeOut(500, function(){
+  $(this).remove();
+  $("#contain_posts").prepend('<%= j render @feedback %>');
+})

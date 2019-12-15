@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :parkings
+  resources :feedbacks
+  resources :bookings
   devise_for :users
   root 'home#home'
   get 'contact', to: 'home#contact'
@@ -7,6 +8,6 @@ Rails.application.routes.draw do
 
   post 'request_contact', to: 'home#request_contact'
 
-  get 'booking', to: 'parking#addBooking'
+  get '/parkingsssss', to: 'bookings#parkingIndex'
 
 end
